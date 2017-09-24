@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join('..', 'python-wrapper-lib')))
+sys.path.append(os.path.abspath(os.path.join('python-wrapper-lib')))
 from kafka_wrapper_module import KafkaWrapperModule
-sys.path.append(os.path.abspath(os.path.join('..', 'python-wrapper-lib')))
 from in_message import InMessage
 from out_message import OutMessage
 
