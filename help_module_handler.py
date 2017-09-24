@@ -13,11 +13,11 @@ class HelpModuleHelper(KafkaWrapperModule):
         
     def handle_command(self, in_message):
         help_file_path = "/opt/help-module/help.txt"
-        is_help_file_exists = process_help_file(help_file_path)
+        is_help_file_exists = self.process_help_file(help_file_path)
         text = "Hello from help-module (error :()"
         if is_help_file_exists:
             text = "To add your info edit the help file: " + help_file_path + "\n"
-            text += read_help_file(help_file_path)
+            text += self.read_help_file(help_file_path)
         out_message = OutMessage(
             key=in_message.key,
             connector_id=in_message.connector_id,
