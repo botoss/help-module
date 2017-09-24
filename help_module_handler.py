@@ -24,7 +24,7 @@ class HelpModuleHelper(KafkaWrapperModule):
             text=text)
         return out_message
 
-    def process_help_file(help_file_path):
+    def process_help_file(self, help_file_path):
         if os.path.exists(help_file_path) == False:
             try:
                 makedirs(path.dirname(help_file_path))
@@ -35,7 +35,7 @@ class HelpModuleHelper(KafkaWrapperModule):
                 return False
         return True
 
-    def read_help_file(help_file_path):
+    def read_help_file(self, help_file_path):
         text = "Error :("
         if os.path.exists(help_file_path):
             try:
